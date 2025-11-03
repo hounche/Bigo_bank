@@ -1,0 +1,21 @@
+services:
+  bank-api:
+    build: ./bank_account
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./bank_account:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  bank-ui:
+    build: ./bank-account-ui
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./bank-account-ui:/usr/src/app
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - bank-api
+    command: npm run dev -- --host

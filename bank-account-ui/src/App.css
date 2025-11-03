@@ -1,0 +1,419 @@
+/* === BASE GLOBALE === */
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f4f6fa;
+  color: #333;
+}
+
+/* === HEADER === */
+header {
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 25px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #0d6efd;
+  font-weight: 700;
+}
+
+header p {
+  color: #777;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* === CONTENEUR PRINCIPAL === */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === SECTIONS === */
+.create-account,
+.accounts {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 35px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+h2 {
+  margin-top: 0;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* === FORMULAIRE CRÉATION === */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+form input,
+form select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 200px;
+  font-size: 14px;
+  background: #fff;
+}
+
+form input:focus,
+form select:focus {
+  outline: none;
+  border-color: #0d6efd;
+  box-shadow: 0 0 5px rgba(13, 110, 253, 0.3);
+}
+
+form button {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background: #0b5ed7;
+  transform: translateY(-2px);
+}
+
+/* === GRILLE DE COMPTES === */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  justify-content: center;
+}
+
+/* === CARTE COMPTE === */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  margin: 0;
+  color: #0d6efd;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card h3 span {
+  color: #999;
+  font-size: 13px;
+}
+
+/* === SOLDE === */
+.balance {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 12px 0;
+}
+
+/* === ZONE D’ACTIONS === */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.actions input {
+  width: 100%;
+  max-width: 100px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 13px;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.actions input:focus {
+  border-color: #0d6efd;
+  outline: none;
+  box-shadow: 0 0 5px rgba(13, 110, 253, 0.2);
+}
+
+.card .actions button {
+  flex: 1 1 80px;
+  min-width: 80px;
+}
+
+/* === BOUTONS COULEURS === */
+.btn-green,
+.btn-red,
+.btn-blue {
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-green {
+  background: #198754;
+}
+.btn-green:hover {
+  background: #157347;
+  transform: translateY(-2px);
+}
+
+.btn-red {
+  background: #dc3545;
+}
+.btn-red:hover {
+  background: #bb2d3b;
+  transform: translateY(-2px);
+}
+
+.btn-blue {
+  background: #0d6efd;
+}
+.btn-blue:hover {
+  background: #0b5ed7;
+  transform: translateY(-2px);
+}
+
+.full {
+  width: 100%;
+}
+
+/* === BOUTON INTÉRÊTS GOLD === */
+.btn-yellow {
+  background: linear-gradient(135deg, #ffb300 0%, #ff7b00 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(255, 193, 7, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-yellow:hover {
+  background: linear-gradient(135deg, #ff7b00 0%, #ffb300 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 193, 7, 0.5);
+}
+
+.btn-yellow:active {
+  transform: scale(0.97);
+}
+
+.btn-yellow::before {
+  content: "💹";
+  font-size: 1rem;
+}
+
+/* === BADGE LIVRET A / B === */
+.badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 7px;
+  font-size: 0.75em;
+  font-weight: bold;
+  color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* === MODAL (RELEVÉ BANCAIRE) === */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  width: 400px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #444;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+.statement-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px 35px;
+  width: 500px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: popIn 0.3s ease;
+}
+
+.statement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.statement-header h2 {
+  margin: 0;
+  color: #0d6efd;
+}
+
+.statement-info {
+  background: #f8f9fc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+/* === TABLE DES OPÉRATIONS === */
+.operations-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.operations-table th {
+  background: #f0f4fa;
+  color: #333;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.operations-table td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.operations-table tr.deposit td {
+  color: #0f8b24;
+  font-weight: 600;
+}
+
+.operations-table tr.withdraw td {
+  color: #c71d1d;
+  font-weight: 600;
+}
+
+.operations-table tr.interest td {
+  color: #f1c40f;
+  font-weight: 700;
+}
+
+.operations-table td.empty {
+  text-align: center;
+  color: #777;
+  padding: 15px 0;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === VERSION SOMBRE purement (optionnelle) === */
+/*
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark .card,
+body.dark .create-account,
+body.dark .accounts {
+  background: #1e1e1e;
+  color: #eee;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.dark header {
+  background: #1e1e1e;
+}
+
+body.dark .btn-blue {
+  background: #007bff;
+}
+
+body.dark .btn-green {
+  background: #00c853;
+}
+
+body.dark .btn-red {
+  background: #e53935;
+}
+
+body.dark .btn-yellow {
+  background: linear-gradient(135deg, #ffd740, #ffab00);
+  color: #222;
+}
+*/

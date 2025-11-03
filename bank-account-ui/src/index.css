@@ -1,0 +1,40 @@
+/* Bannière de bienvenue */
+.welcome-banner {
+  background: linear-gradient(135deg, #0d6efd 0%, #4a90e2 100%);
+  color: white;
+  border-radius: 14px;
+  padding: 25px 35px;
+  margin: 30px auto;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 12px rgba(13, 110, 253, 0.2);
+}
+
+.welcome-banner h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.welcome-banner p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.total-balance {
+  text-align: right;
+}
+
+.total-balance span {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.total-balance strong {
+  display: block;
+  font-size: 22px;
+  margin-top: 4px;
+}
