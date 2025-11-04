@@ -1,21 +1,22 @@
 # 🏦 BIGO BANK — Hexagonal Architecture Bank App
+
 💡 Description :BIGO BANK est une application de gestion de comptes bancaires développée dans une architecture hexagonale (ports & adapters).
 Elle simule les opérations d’un client bancaire : création de comptes, dépôts, retraits, gestion de découvert, plafonds d’épargne et génération de relevés mensuels.
 
 L’objectif du projet est de démontrer une architecture propre, maintenable et testable, tout en proposant un front moderne en React.
 
 # ⚙️ Stack technique
+
 - Backend : Python 3.11, FastAPI — framework web rapide et typé
 - SQLAlchemy — ORM pour la persistance SQLite
 - Pydantic — validation et sérialisation
 - pytest — tests unitaires
 - Docker / docker-compose — pour l’exécution isolée
-
 - Frontend : React + Vite, Vanilla CSS (sans Tailwind)
-
 - Base de données : SQLite (fichier bank.db)
 
 # 🧱 Architecture (DDD + Hexagonale)
+
 bank_account/
 ├── domain/              # Règles métier
 │   ├── models.py        # Entités : BankAccount, Operation
@@ -40,8 +41,8 @@ bank_account/
 
 🧩 L’application sépare clairement le domaine, la logique d’application et l’infrastructure,ce qui facilite l’évolution et les tests unitaires.
 
-
 # 💰 Fonctionnalités (features)
+
 - 🏦 Feature 1 : Compte bancaire
 
 1- Création d’un compte avec numéro unique et solde
@@ -65,18 +66,18 @@ Deux types de livrets : Compte courant, Livret B
 1- Relevé mensuel des opérations (triées par date décroissante)
 2- Affichage des opérations dans une modale
 
-
 🚀 Exécution du projet
 ▶️ 1. Lancer le backend (FastAPI)
 
 Depuis la racine du projet :
 
 # Activer l'environnement virtuel
+
 .venv\Scripts\activate
 
 # Lancer l'API
-uvicorn bank_account.main:app --reload
 
+uvicorn bank_account.main:app --reload
 
 - L’API sera accessible sur : -> http://127.0.0.1:8000
 - Documentation interactive Swagger : -> http://127.0.0.1:8000/docs
@@ -84,6 +85,7 @@ uvicorn bank_account.main:app --reload
 # 🖥️ 2. Lancer le frontend (React)
 
 Depuis le dossier bank-account-ui :
+
 - npm install
 - npm run dev
 
@@ -103,7 +105,8 @@ Exécuter les tests unitaires du backend : pytest -v
 1- Créer un compte courant avec ou sans découvert.
 2- Créer un livret épargne avec un plafond.
 3- Faire un dépôt / retrait.
-4- Consulter le relevé (et le télécharger en PDF).
+4- Consulter le relevé (et le télécharger en PDF). (à faire)
 
 # 🧠 Auteur: 👨‍💻 Maël Hounche
+
 Projet technique et pédagogique réalisé dans le cadre de la démonstration de compétences logicielles et de modélisation métier (architecture hexagonale + React + FastAPI).
