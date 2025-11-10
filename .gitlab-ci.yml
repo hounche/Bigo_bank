@@ -1,9 +1,12 @@
 stages:
   - test
   - build
+  - deploy
 
 variables:
   PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  VERCEL_ORG_ID: "ton_org_id"
+  VERCEL_PROJECT_ID: "ton_project_id"
 
 cache:
   paths:
@@ -25,4 +28,16 @@ docker-build:
     - docker build -t bank-account:latest .
   only:
     - merge_requests
+    - main
+
+deploy-vercel:
+  stage: deploy
+  image: node:20
+  script:
+    - npm install -g vercel
+    - cd bank-account-ui
+    - vercel pull --yes --environment=production --token $VERCEL_TOKEN
+    - vercel build --prod --token $VERCEL_TOKEN
+    - vercel deploy --prebuilt --prod --token $VERCEL_TOKEN
+  only:
     - main
